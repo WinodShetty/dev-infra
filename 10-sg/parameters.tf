@@ -16,3 +16,9 @@ resource "aws_ssm_parameter" "frontend_sg_id" {
   value = module.frontend_sg.sg_id
 }
 
+resource "aws_ssm_parameter" "bastion_sg_id" {
+ 
+}
+
+
+
