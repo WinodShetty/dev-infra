@@ -23,4 +23,3 @@ resource "aws_ssm_parameter" "bastion_sg_id" {
 }
 
 
-
