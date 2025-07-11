@@ -22,4 +22,6 @@ resource "aws_ssm_parameter" "bastion_sg_id" {
   value = module.bastion_sg.sg_id
 }
 
-
+resource "aws_ssm_parameter" "eks_node_sg_id" {
+  
+}
