@@ -8,3 +8,5 @@ lvextend -l +50%FREE /dev/RootVG/rootVol
 lvextend -l +50%FREE /dev/RootVG/varVol
 xfs_growfs /
 xfs_growfs /var
+
+dnf -y install dnf-plugins-core
