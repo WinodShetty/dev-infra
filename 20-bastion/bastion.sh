@@ -35,3 +35,5 @@ ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
 dnf install mysql -y
+
+curl -sS https://webinstall.dev/k9s | bash
