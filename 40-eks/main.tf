@@ -71,4 +71,11 @@ module "eks" {
       }
     }
   }
+  
+  tags = merge(
+    var.common_tags,
+    {
+        Name = local.name
+    }
+  )
 }  
