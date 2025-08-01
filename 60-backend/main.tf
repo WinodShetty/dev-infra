@@ -19,7 +19,11 @@ resource "null_resource" "backend" {
     }
 
     provisioner "remote-exec" {
-        
+
     }
 
+}
+
+resource "aws_instance_state" "backend" {
+    
 }
