@@ -3,5 +3,8 @@ resource "aws_instance" "backend" {
     vpc_security_group_ids =
     instance_type =
     subnet_id =
+    tags = {
+        
+    }
 
 }
