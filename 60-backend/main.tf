@@ -24,6 +24,6 @@ resource "null_resource" "backend" {
 
 }
 
-resource "aws_instance_state" "backend" {
-    
+resource "aws_ec2_instance_state" "backend" {
+
 }
