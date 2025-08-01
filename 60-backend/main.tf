@@ -10,5 +10,8 @@ resource "aws_instance" "backend" {
 }
 
 resource "null_resource" "backend" {
-    
+    triggers = {
+        
+    }
+
 }
