@@ -4,7 +4,11 @@ resource "aws_instance" "backend" {
     instance_type =
     subnet_id =
     tags = {
-        
+
     }
 
+}
+
+resource "null_resource" "backend" {
+    
 }
