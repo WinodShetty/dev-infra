@@ -14,7 +14,11 @@ resource "null_resource" "backend" {
 
     }
 
-    connections = {
+    connections {
+
+    }
+
+    provisioner "remote-exec" {
         
     }
 
