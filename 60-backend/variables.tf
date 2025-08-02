@@ -14,3 +14,6 @@ variable "common_tags" {
     }
 }
 
+variable "domain_name" {
+    default = "daws82s.online"
+}
