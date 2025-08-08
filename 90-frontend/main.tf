@@ -174,3 +174,9 @@ resource "aws_lb_listener_rule" "frontend" {
     }
   }
 }
+
+resource "null_resource" "frontend" {
+  # Changes to any instance of the instance requires re-provisioning
+  triggers = {
+    instance_id = aws_instance.frontend.id
+  }
