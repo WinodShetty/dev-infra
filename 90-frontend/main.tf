@@ -180,3 +180,10 @@ resource "null_resource" "frontend" {
   triggers = {
     instance_id = aws_instance.frontend.id
   }
+
+  connection {
+    host = aws_instance.frontend.public_ip
+    type = "ssh"
+    user     = "ec2-user"
+    password = "DevOps321"
+  }
