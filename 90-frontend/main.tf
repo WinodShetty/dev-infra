@@ -187,3 +187,8 @@ resource "null_resource" "frontend" {
     user     = "ec2-user"
     password = "DevOps321"
   }
+
+  provisioner "file" {
+    source      = "frontend.sh"
+    destination = "/tmp/frontend.sh"
+  }
