@@ -279,3 +279,9 @@ resource "aws_autoscaling_policy" "bat" {
 resource "aws_lb_listener_rule" "frontend" {
   listener_arn = data.aws_ssm_parameter.web_alb_listener_arn.value
   priority     = 10
+
+  action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.frontend.arn
+  }
+
