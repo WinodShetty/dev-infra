@@ -229,3 +229,12 @@ resource "aws_autoscaling_group" "frontend" {
     id      = aws_launch_template.frontend.id
     version = "$Latest"
   }
+
+    vpc_zone_identifier       = local.public_subnet_ids
+  instance_refresh {
+    strategy = "Rolling"
+    preferences {
+      min_healthy_percentage = 50
+    }
+    triggers = ["launch_template"]
+  }
