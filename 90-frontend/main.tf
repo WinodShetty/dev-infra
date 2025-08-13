@@ -254,3 +254,11 @@ resource "aws_autoscaling_group" "frontend" {
     value               = "expense"
     propagate_at_launch = false
   }
+
+  
+  tag {
+    key                 = "Environment"
+    value               = "dev"
+    propagate_at_launch = false
+  }
+}
