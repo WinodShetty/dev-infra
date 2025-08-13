@@ -238,3 +238,9 @@ resource "aws_autoscaling_group" "frontend" {
     }
     triggers = ["launch_template"]
   }
+
+  tag {
+    key                 = "Name"
+    value               = local.resource_name
+    propagate_at_launch = true
+  }
