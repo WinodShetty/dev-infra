@@ -275,3 +275,7 @@ resource "aws_autoscaling_policy" "bat" {
      target_value = 70.0
   }
 }
+
+resource "aws_lb_listener_rule" "frontend" {
+  listener_arn = data.aws_ssm_parameter.web_alb_listener_arn.value
+  priority     = 10
