@@ -244,3 +244,7 @@ resource "aws_autoscaling_group" "frontend" {
     value               = local.resource_name
     propagate_at_launch = true
   }
+
+  timeouts {
+    delete = "10m"
+  }
