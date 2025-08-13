@@ -269,5 +269,9 @@ resource "aws_autoscaling_policy" "bat" {
   autoscaling_group_name = aws_autoscaling_group.frontend.name
   target_tracking_configuration {
     predefined_metric_specification {
-      predefined_metric_type = "ASGAverageCPUUtilization"
+      predefined_
+      metric_type = "ASGAverageCPUUtilization"
     }
+     target_value = 70.0
+  }
+}
