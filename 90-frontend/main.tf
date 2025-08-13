@@ -262,3 +262,12 @@ resource "aws_autoscaling_group" "frontend" {
     propagate_at_launch = false
   }
 }
+
+resource "aws_autoscaling_policy" "bat" {
+  name                   = "${local.resource_name}-frontend"
+  policy_type            = "TargetTrackingScaling"
+  autoscaling_group_name = aws_autoscaling_group.frontend.name
+  target_tracking_configuration {
+    predefined_metric_specification {
+      predefined_metric_type = "ASGAverageCPUUtilization"
+    }
