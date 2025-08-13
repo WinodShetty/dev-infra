@@ -285,3 +285,9 @@ resource "aws_lb_listener_rule" "frontend" {
     target_group_arn = aws_lb_target_group.frontend.arn
   }
 
+condition {
+    host_header {
+      values = ["expense-${var.environment}.${var.domain_name}"]
+    }
+  }
+}
