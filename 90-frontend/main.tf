@@ -198,3 +198,21 @@ resource "null_resource" "frontend" {
   state       = "stopped"
   depends_on = [null_resource.frontend]
 }
+
+resource "aws_launch_template" "frontend" {
+  name = local.resource_name
+  image_id = aws_ami_from_instance.frontend.id
+  instance_initiated_shutdown_behavior = "terminate"
+  instance_type = "t3.micro"
+  update_default_version = true
+
+  vpc_security_group_ids = [local.frontend_sg_id]
+
+  tag_specifications {
+    resource_type = "instance"
+
+    tags = {
+      Name = local.resource_name
+    }
+  }
+}
