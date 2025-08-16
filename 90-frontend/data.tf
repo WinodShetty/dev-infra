@@ -6,4 +6,10 @@ data "aws_ami" "joindevops" {
         values = ["RHEL-9-DevOps-Practice"]
     }
 
+    filter {
+        name   = "root-device-type"
+        values = ["ebs"]
+    }
+
+   
 }
