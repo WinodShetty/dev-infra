@@ -18,5 +18,8 @@ module "alb" {
 
 resource "aws_lb_listener" "http" {
   load_balancer_arn = module.alb.arn
+  port              = "80"
+  protocol          = "HTTP"
+
   
 }
