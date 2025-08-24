@@ -35,5 +35,5 @@ resource "aws_lb_listener" "http" {
 
 resource "aws_route53_record" "app_alb" {
   zone_id = var.zone_id
-  
+  name    = "*.app-dev.${var.domain_name}"
 }
