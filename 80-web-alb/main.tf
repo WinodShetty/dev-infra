@@ -9,4 +9,11 @@ module "alb" {
    security_groups = [local.web_alb_sg_id]
    enable_deletion_protection = false
  
+   tags = merge(
+    var.common_tags,
+    {
+        Name = "${var.project_name}-${var.environment}-web-alb"
+    }
+  )
+
 }
