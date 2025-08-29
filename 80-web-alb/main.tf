@@ -3,5 +3,6 @@ module "alb" {
   internal = false
   # expense-dev-app-alb
   name    = "${var.project_name}-${var.environment}-web-alb"
+  vpc_id  = data.aws_ssm_parameter.vpc_id.value
  
 }
