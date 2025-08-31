@@ -23,5 +23,10 @@ resource "aws_route53_record" "web_alb" {
   name    = "expense-${var.environment}.${var.domain_name}"
   type    = "A"
 
-  
+  # these are ALB DNS name and zone information
+  alias {
+    name                   = module.alb.dns_name
+    zone_id                = module.alb.zone_id
+    evaluate_target_health = false
+  }
 }
