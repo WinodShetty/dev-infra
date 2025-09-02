@@ -12,4 +12,6 @@ resource "aws_acm_certificate" "expense" {
   
 }
 
-
+resource "aws_route53_record" "expense" {
+  
+  }
